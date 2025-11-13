@@ -1,0 +1,125 @@
+.row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;  
+    margin: 10px;
+}
+
+.tile{
+    border: solid#747679;
+	background: #e1e1ff;
+    height: 50px;
+    width: 50px;
+    font-size:300%;
+    align-items: center;
+    justify-content: center;  
+    text-align: center; 
+    font-weight:bolder;
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    color: #000000;
+    background: #e1e1ff;
+    text-transform: uppercase;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+
+}
+
+.is-filled {
+	border-color: #d8d8d8;
+}
+
+.wrong {
+	border-color: #565758;
+	background-color: #565758;
+}
+
+.present {
+	border-color: #b59f3b;
+	background-color: #b59f3b;
+}
+
+.correct {
+	border-color: #538d4e;
+	background-color: #538d4e;
+}
+
+
+.keyboard {
+	display: grid;
+	grid-template-columns: repeat(13, 1fr);
+	gap: 3px;
+}
+
+.keyboard .tile {
+	font-size: 30px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.row {
+	--animate-duration: 0.75s;
+	--animate-delay: 0.25s;
+}
+
+@-webkit-keyframes bounceIn {
+	0%,
+	25%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.4, 0.4, 0.4);
+		transform: scale3d(0.4, 0.4, 0.4);
+	}
+	25% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.1, 1.1, 1.1);
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+
+@keyframes bounceIn {
+	0%,
+	25%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.4, 0.4, 0.4);
+		transform: scale3d(0.4, 0.4, 0.4);
+	}
+	25% {
+		opacity: 1;
+		-webkit-transform: scale3d(1.1, 1.1, 1.1);
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+	}
+}
+.animate__bounceIn {
+	-webkit-animation-duration: 0.2s;
+	animation-duration: 0.2s;
+	-webkit-animation-duration: calc(var(--animate-duration) * 0.2);
+	animation-duration: calc(var(--animate-duration) * 0.2);
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+}
